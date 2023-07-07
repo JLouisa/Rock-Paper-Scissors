@@ -43,7 +43,9 @@ The same is a tie
 //Create function to compete against the computer
 function calcCompete(playerSelection,computerSelection){
 
-    console.log("Player => " + playerSelection);
+   
+    const plyerLowerCase = playerSelection.toLowerCase();
+    const computerLowerCase = computerSelection.toLowerCase();
     //console.log(computerSelection);
 
    // if(playerSelection === "Scissors"){console.log("Win")}
@@ -54,22 +56,43 @@ function calcCompete(playerSelection,computerSelection){
    
    // if(playerSelection === computerSelection){console.log("It's a tie!")}
      //   else {console.log("Lose")};
-
     
-    if(playerSelection.toLowerCase() == computerSelection.toLowerCase()){console.log("It's a tie! Try again!")}
-        else {if(playerSelection.toLowerCase() == "rock" && computerSelection.toLowerCase() == "scissors"){console.log("Player Wins! Rock beats Scissors")}
-            else {if(playerSelection.toLowerCase() == "scissors" && computerSelection.toLowerCase() == "paper"){console.log("Player Wins! Scissors beats Paper")}
-                 else {if(playerSelection.toLowerCase() == "paper" && computerSelection.toLowerCase() == "rock"){console.log("Player Wins! Paper beats Rock")}
+     //console.log("Computer => " + choice)
+     console.log("Player => " + playerSelection);
+    
+    if(plyerLowerCase == computerLowerCase) {console.log("It's a tie! Try again!")}
+        else {if(plyerLowerCase == "rock" && computerLowerCase == "scissors"){console.log("Player Wins! Rock beats Scissors")}
+            else {if(plyerLowerCase == "scissors" && computerLowerCase == "paper"){console.log("Player Wins! Scissors beats Paper")}
+                 else {if(plyerLowerCase == "paper" && computerLowerCase == "rock"){console.log("Player Wins! Paper beats Rock")}
                    // else {computerSelection == "Rock" ? console.log("Computer Wins")};
-                     else {computerSelection.toLowerCase() == "rock" && playerSelection.toLowerCase() == "scissors" ? console.log("Computer Wins! Rock beats Scissors") :
-                     computerSelection.toLowerCase() == "scissors" && playerSelection.toLowerCase() == "paper" ? console.log("Computer Wins! Scissors beats Paper") : 
+                     else {computerLowerCase == "rock" && plyerLowerCase == "scissors" ? console.log("Computer Wins! Rock beats Scissors") :
+                     computerLowerCase == "scissors" && plyerLowerCase == "paper" ? console.log("Computer Wins! Scissors beats Paper") : 
                      console.log("Computer Wins! Paper beats Rock");}
                      }
                  }
             }
-   
+    
 }
 
 getComputerChoice();
 
-calcCompete("SciSSorS",choice);
+calcCompete("Rock",choice);
+
+
+
+/*
+function playRound(playerSelection, computerSelection) {
+    if(playerSelection == computerSelection){console.log("It's a tie! Try again!")}
+    else {if(playerSelection == "rock" && computerSelection == "scissors"){console.log("Player Wins! Rock beats Scissors")}
+        else {if(playerSelection.toLowerCase() == "scissors" && computerSelection == "paper"){console.log("Player Wins! Scissors beats Paper")}
+             else {if(playerSelection == "paper" && computerSelection == "rock"){console.log("Player Wins! Paper beats Rock")}
+                 else {computerSelection == "rock" && playerSelection == "scissors" ? console.log("Computer Wins! Rock beats Scissors") :
+                        computerSelection == "scissors" && playerSelection == "paper" ? console.log("Computer Wins! Scissors beats Paper") : 
+                        console.log("Computer Wins! Paper beats Rock");}
+  }}}}
+   
+  const playerSelection = "rock";
+  const computerSelection = getComputerChoice();
+  console.log(playRound(playerSelection, computerSelection));
+
+  */
