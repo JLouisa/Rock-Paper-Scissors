@@ -99,21 +99,16 @@ function playRound(playerSelection, computerSelection) {
 
   */
 
-
+const randomCC = Math.random().toFixed(2)*100;
 
 function getComputerChoice(choiceComp) {
-        
-    const randomCC = Math.random().toFixed(2)*100;
 
-    if(randomCC < 33){choiceComp = "Rock";}
-        else {if(randomCC > 66) {choiceComp = "Paper"}
-            else {choiceComp = "Scissors"}
-            }
+    if(randomCC < 33){choiceComp = "rock"}
+        else {if(randomCC > 66) {choiceComp = "paper"}
+            else {choiceComp = "scissors"}
+            };
     return choiceComp;
 }
-
-
-
 
 
 //Create Player choice
@@ -127,19 +122,27 @@ function getComputerChoice(choiceComp) {
 
 function roundOfRPS(playerSelection, computerSelection) {
 
-
 playerSelection = player.toLowerCase();
-computerSelection = getComputerChoice().toLowerCase();
+computerSelection = computer.toLowerCase();
 
-if(playerSelection == computerSelection) {console.log("It's a tie! Try again")}
-    else {console.log("Try again!")}
+if(playerSelection === computerSelection) {console.log("It's a tie! Try again")}
+    else {if(playerSelection ==="rock" && computerSelection === "scissors") {console.log("You win! Rock beats Scissors")}
+        else {if(playerSelection ==="scissors" && computerSelection === "paper") {console.log("You win! Scissors beats Paper")}
+            else {if(playerSelection ==="paper" && computerSelection === "rock") {console.log("You win! Paper beats Rock")}
+                else{console.log("You lose!")}
+}}}
 
+console.log(computer === computerSelection);
 }
 
-const player = "rOCk"
+const player = "rock"
+const computer = getComputerChoice();
 
 console.log("Player => " + player);
 
 console.log("Computer => " + getComputerChoice());
 
 roundOfRPS(player, getComputerChoice());
+
+console.log(computer === getComputerChoice());
+
