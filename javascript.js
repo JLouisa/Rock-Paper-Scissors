@@ -23,3 +23,14 @@ function getComputerChoice() {
 }
 
 getComputerChoice();
+
+/* 
+Create function to compete against the computer
+
+computerSelection is the choice that computer makes
+computerSelection comes from the previous function
+computerSelection equals getComputerChoice()
+playerSelection is the choice that the player makes inside the function
+playerSelection will be filled inside the compete function
+
+*/ 
