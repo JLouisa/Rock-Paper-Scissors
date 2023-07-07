@@ -14,15 +14,18 @@ print computer choice */
 
 //use the random math function to get a number
 let random = Math.random().toFixed(2)*100;
+let choice
 
 function getComputerChoice() {
-    if(random < 33){console.log("Rock")}
-        else {if(random > 66) {console.log("Paper")}
-            else {console.log("Scissors")}
+        
+    if(random < 33){choice = "Rock";}
+        else {if(random > 66) {choice = "Paper"}
+            else {choice = "Scissors"}
             }
+    console.log(choice);
 }
 
-// getComputerChoice();
+getComputerChoice();
 
 /* 
 Create function to compete against the computer
@@ -43,11 +46,16 @@ The same is a tie
 function calcCompete(playerSelection,computerSelection){
 
     console.log(playerSelection);
-    console.log(computerSelection);
+    //console.log(computerSelection);
 
-    if(playerSelection === "Paper"){console.log("Win")}
+   // if(playerSelection === "Scissors"){console.log("Win")}
+    //    else {console.log("Lose")};
+
+   //if(computerSelection === "Rock"){console.log("Win")}
+   // else {console.log("Lose")};
+   
+    if(playerSelection === computerSelection){console.log("It's a tie!")}
         else {console.log("Lose")};
-
 }
 
-calcCompete("Rock",getComputerChoice());
+calcCompete("Scissors",choice);
