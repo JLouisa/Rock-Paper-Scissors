@@ -22,7 +22,7 @@ function getComputerChoice() {
             }
 }
 
-getComputerChoice();
+// getComputerChoice();
 
 /* 
 Create function to compete against the computer
@@ -32,5 +32,22 @@ computerSelection comes from the previous function
 computerSelection equals getComputerChoice()
 playerSelection is the choice that the player makes inside the function
 playerSelection will be filled inside the compete function
+add rules to win at Rock-Paper-Scissors
+Rock wins over Scissors
+Scissors wins over Paper
+Paper wins over Rock
+The same is a tie
 
 */ 
+//Create function to compete against the computer
+function calcCompete(playerSelection,computerSelection){
+
+    console.log(playerSelection);
+    console.log(computerSelection);
+
+    if(playerSelection === "Paper"){console.log("Win")}
+        else {console.log("Lose")};
+
+}
+
+calcCompete("Rock",getComputerChoice());
