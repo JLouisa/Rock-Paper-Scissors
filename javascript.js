@@ -125,17 +125,19 @@ function roundOfRPS(playerSelection, computerSelection) {
 playerSelection = player.toLowerCase();
 computerSelection = computer.toLowerCase();
 
+//Winning
 if(playerSelection === computerSelection) {console.log("It's a tie! Try again")}
     else {if(playerSelection ==="rock" && computerSelection === "scissors") {console.log("You win! Rock beats Scissors")}
         else {if(playerSelection ==="scissors" && computerSelection === "paper") {console.log("You win! Scissors beats Paper")}
             else {if(playerSelection ==="paper" && computerSelection === "rock") {console.log("You win! Paper beats Rock")}
-                else{console.log("You lose!")}
-}}}
-
-console.log(computer === computerSelection);
+//Losing
+            else {if(computerSelection === "rock") {console.log("You lose! Rock beats Scissors")}
+            else {if(computerSelection === "scissors") {console.log("You lose! Scissors beats paper")}
+            else {console.log("You lose! Paper beats Rock")}
+}}}}}
 }
 
-const player = "rock"
+const player = "Paper"
 const computer = getComputerChoice();
 
 console.log("Player => " + player);
@@ -143,6 +145,4 @@ console.log("Player => " + player);
 console.log("Computer => " + getComputerChoice());
 
 roundOfRPS(player, getComputerChoice());
-
-console.log(computer === getComputerChoice());
 
