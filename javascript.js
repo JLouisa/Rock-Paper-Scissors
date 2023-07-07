@@ -22,7 +22,7 @@ function getComputerChoice() {
         else {if(random > 66) {choice = "Paper"}
             else {choice = "Scissors"}
             }
-    console.log("Computer " + choice);
+    console.log("Computer => " + choice);
 }
 
 /* 
@@ -43,7 +43,7 @@ The same is a tie
 //Create function to compete against the computer
 function calcCompete(playerSelection,computerSelection){
 
-    console.log("Player " + playerSelection);
+    console.log("Player => " + playerSelection);
     //console.log(computerSelection);
 
    // if(playerSelection === "Scissors"){console.log("Win")}
@@ -57,10 +57,13 @@ function calcCompete(playerSelection,computerSelection){
 
     
     if(playerSelection === computerSelection){console.log("It's a tie! Try again!")}
-        else {if(playerSelection === "Rock" && computerSelection == "Scissors"){console.log("Player Win")}
-            else {if(playerSelection === "Scissors" && computerSelection == "Paper"){console.log("Player Win")}
-                 else {if(playerSelection === "Paper" && computerSelection == "Rock"){console.log("Player Win")}
-                    else {console.log("Computer Wins")};
+        else {if(playerSelection === "Rock" && computerSelection == "Scissors"){console.log("Player Wins! Rock beats Scissors")}
+            else {if(playerSelection === "Scissors" && computerSelection == "Paper"){console.log("Player Wins! Scissors beats Paper")}
+                 else {if(playerSelection === "Paper" && computerSelection == "Rock"){console.log("Player Wins! Paper beats Rock")}
+                   // else {computerSelection == "Rock" ? console.log("Computer Wins")};
+                     else {computerSelection === "Rock" && player === "Scissors" ? console.log("Computer Wins! Rock beats Scissors") :
+                     computerSelection === "Scissors" && player === "Paper" ? console.log("Computer Wins! Scissors beats Paper") : 
+                     console.log("Computer Wins! Paper beats Rock");}
                      }
                  }
             }
