@@ -56,13 +56,13 @@ function calcCompete(playerSelection,computerSelection){
      //   else {console.log("Lose")};
 
     
-    if(playerSelection === computerSelection){console.log("It's a tie! Try again!")}
-        else {if(playerSelection === "Rock" && computerSelection == "Scissors"){console.log("Player Wins! Rock beats Scissors")}
-            else {if(playerSelection === "Scissors" && computerSelection == "Paper"){console.log("Player Wins! Scissors beats Paper")}
-                 else {if(playerSelection === "Paper" && computerSelection == "Rock"){console.log("Player Wins! Paper beats Rock")}
+    if(playerSelection.toLowerCase() == computerSelection.toLowerCase()){console.log("It's a tie! Try again!")}
+        else {if(playerSelection.toLowerCase() == "rock" && computerSelection.toLowerCase() == "scissors"){console.log("Player Wins! Rock beats Scissors")}
+            else {if(playerSelection.toLowerCase() == "scissors" && computerSelection.toLowerCase() == "paper"){console.log("Player Wins! Scissors beats Paper")}
+                 else {if(playerSelection.toLowerCase() == "paper" && computerSelection.toLowerCase() == "rock"){console.log("Player Wins! Paper beats Rock")}
                    // else {computerSelection == "Rock" ? console.log("Computer Wins")};
-                     else {computerSelection === "Rock" && player === "Scissors" ? console.log("Computer Wins! Rock beats Scissors") :
-                     computerSelection === "Scissors" && player === "Paper" ? console.log("Computer Wins! Scissors beats Paper") : 
+                     else {computerSelection.toLowerCase() == "rock" && playerSelection.toLowerCase() == "scissors" ? console.log("Computer Wins! Rock beats Scissors") :
+                     computerSelection.toLowerCase() == "scissors" && playerSelection.toLowerCase() == "paper" ? console.log("Computer Wins! Scissors beats Paper") : 
                      console.log("Computer Wins! Paper beats Rock");}
                      }
                  }
@@ -72,4 +72,4 @@ function calcCompete(playerSelection,computerSelection){
 
 getComputerChoice();
 
-calcCompete("Rock",choice);
+calcCompete("SciSSorS",choice);
