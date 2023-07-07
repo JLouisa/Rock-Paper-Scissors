@@ -25,8 +25,6 @@ function getComputerChoice() {
     console.log(choice);
 }
 
-getComputerChoice();
-
 /* 
 Create function to compete against the computer
 
@@ -54,8 +52,21 @@ function calcCompete(playerSelection,computerSelection){
    //if(computerSelection === "Rock"){console.log("Win")}
    // else {console.log("Lose")};
    
+   // if(playerSelection === computerSelection){console.log("It's a tie!")}
+     //   else {console.log("Lose")};
+
+    
     if(playerSelection === computerSelection){console.log("It's a tie!")}
-        else {console.log("Lose")};
+        else {if(playerSelection === "Rock" && computerSelection == "Scissors"){console.log("Player Win")}
+            else {if(playerSelection === "Scissors" && computerSelection == "Paper"){console.log("Player Win")}
+                 else {if(playerSelection === "Paper" && computerSelection == "Rock"){console.log("Player Win")}
+                    else {console.log("Player Lose")};
+                     }
+                 }
+            }
+   
 }
+
+getComputerChoice();
 
 calcCompete("Scissors",choice);
