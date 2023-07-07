@@ -1,4 +1,4 @@
-/*
+/* 
 
 I need to get 1 of 3 random choice from a computer
 
@@ -13,6 +13,8 @@ print computer choice */
 
 
 //use the random math function to get a number
+
+/*
 let random = Math.random().toFixed(2)*100;
 let choice
 
@@ -25,7 +27,7 @@ function getComputerChoice() {
     console.log("Computer => " + choice);
 }
 
-/* 
+
 Create function to compete against the computer
 
 computerSelection is the choice that computer makes
@@ -39,7 +41,7 @@ Scissors wins over Paper
 Paper wins over Rock
 The same is a tie
 
-*/ 
+
 //Create function to compete against the computer
 function calcCompete(playerSelection,computerSelection){
 
@@ -96,3 +98,18 @@ function playRound(playerSelection, computerSelection) {
   console.log(playRound(playerSelection, computerSelection));
 
   */
+
+
+
+function getComputerChoice(choice) {
+        
+    let random = Math.random().toFixed(2)*100;
+
+    if(random < 33){choice = "Rock";}
+        else {if(random > 66) {choice = "Paper"}
+            else {choice = "Scissors"}
+            }
+    return choice;
+}
+
+console.log("computer => " + getComputerChoice());
