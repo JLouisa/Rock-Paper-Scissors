@@ -101,15 +101,45 @@ function playRound(playerSelection, computerSelection) {
 
 
 
-function getComputerChoice(choice) {
+function getComputerChoice(choiceComp) {
         
-    let random = Math.random().toFixed(2)*100;
+    const randomCC = Math.random().toFixed(2)*100;
 
-    if(random < 33){choice = "Rock";}
-        else {if(random > 66) {choice = "Paper"}
-            else {choice = "Scissors"}
+    if(randomCC < 33){choiceComp = "Rock";}
+        else {if(randomCC > 66) {choiceComp = "Paper"}
+            else {choiceComp = "Scissors"}
             }
-    return choice;
+    return choiceComp;
 }
 
-console.log("computer => " + getComputerChoice());
+
+
+
+
+//Create Player choice
+//Create rule for the game
+    //Rock beats Scissors
+    //Scissors beats Paper
+    //Paper beats Rock
+//Compare Player choice with Computer Choice
+//Choose the winner
+//Print who wins
+
+function roundOfRPS(playerSelection, computerSelection) {
+
+
+playerSelection = player.toLowerCase();
+computerSelection = getComputerChoice().toLowerCase();
+
+if(playerSelection == computerSelection) {console.log("It's a tie! Try again")}
+    else {console.log("Try again!")}
+
+}
+
+const player = "rOCk"
+
+console.log("Player => " + player);
+
+console.log("Computer => " + getComputerChoice());
+
+roundOfRPS(player, getComputerChoice());
