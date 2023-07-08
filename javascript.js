@@ -188,9 +188,13 @@ if(playerSelection === computerSelection) {return ("It's a tie! Try again")}
 */ 
 
   //-------------------------- Final ---------------------------//
+/*
+Have 5 rounds of game
+Add Score keeping for Player and Computer
+*/
 
 // Computer Choice
-  const randomCC = Math.random().toFixed(2)*100;
+const randomCC = Math.random().toFixed(2)*100;
 
 function getComputerChoice(choiceComp) {
 
@@ -204,7 +208,7 @@ function getComputerChoice(choiceComp) {
 const computerSelection = getComputerChoice();
 
 // Player Choice
-const playerSelection = prompt("Choose your Weapon!").toLowerCase();
+const playerSelection = prompt("Choose your Weapon!", "rock").toLowerCase();
 
 //Rock-Paper-Scissor Function
 function playRound(computerSelection, playerSelection) {
@@ -218,11 +222,14 @@ function playRound(computerSelection, playerSelection) {
                 else {return ("You lose! Paper beats Rock")
     }}}}}}
     }
-       
-      
-      
-    
+function showConsole(){
 console.log("Player => " + playerSelection)
 console.log("Computer => " + getComputerChoice());
-    
+
 console.log((playRound(computerSelection, playerSelection)));
+}
+
+for(i = 0; i < 5; i++){
+    playRound();
+    showConsole();
+}
