@@ -212,7 +212,8 @@ Add Score keeping for Player and Computer
 // console.log("1 " + computerSelection);
 
 //Rock-Paper-Scissor Function
-function playRound(playerSelection, computerSelection) {
+function game(){
+    function playRound(playerSelection, computerSelection) {
  
        
     pSelection = prompt("Choose your Weapon!", "rock");
@@ -238,6 +239,7 @@ function playRound(playerSelection, computerSelection) {
         else {return ("You lose! Paper beats Rock")
     }}}}}}
     }
+return playRound()}
 
 let gameWin = 0;
 let gameLose = 0;
@@ -247,7 +249,7 @@ let result;
 //Round counting
 for(i = 1; i < 6; i++){
     console.log("Round " + i);
-    result = playRound()
+    result = game()
     console.log(result)
     if(result == undefined){ i= 10}
     else {if(result == "You win! Rock beats Scissors" || result == "You win! Scissors beats Paper" || result == "You win! Paper beats Rock") {++gameWin}
