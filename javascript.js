@@ -98,7 +98,7 @@ function playRound(playerSelection, computerSelection) {
   console.log(playRound(playerSelection, computerSelection));
 
   */
-
+/*
 //-------------------------- Attempt #2 ---------------------------//
 const randomCC = Math.random().toFixed(2)*100;
 
@@ -164,7 +164,7 @@ if(playerSelection === computerSelection) {console.log("It's a tie! Try again")}
   const computerSelection = getComputerChoice();
   console.log((playRound()));
 
-*/
+
 
 function playRound(computerSelection, playerSelection) {
 
@@ -185,3 +185,44 @@ if(playerSelection === computerSelection) {return ("It's a tie! Try again")}
   console.log("Computer => " + getComputerChoice());
 
   console.log((playRound(computerSelection, playerSelection)));
+*/ 
+
+  //-------------------------- Final ---------------------------//
+
+// Computer Choice
+  const randomCC = Math.random().toFixed(2)*100;
+
+function getComputerChoice(choiceComp) {
+
+    if(randomCC < 33){choiceComp = "rock"}
+        else {if(randomCC > 66) {choiceComp = "paper"}
+            else {choiceComp = "scissors"}
+            };
+    return choiceComp;
+}
+
+const computerSelection = getComputerChoice();
+
+// Player Choice
+const playerSelection = prompt("Choose your Weapon!").toLowerCase();
+
+//Rock-Paper-Scissor Function
+function playRound(computerSelection, playerSelection) {
+
+    if(playerSelection === computerSelection) {return ("It's a tie! Try again")}
+        else {if(playerSelection ==="rock" && computerSelection === "scissors") {return ("You win! Rock beats Scissors")}
+            else {if(playerSelection ==="scissors" && computerSelection === "paper") {return ("You win! Scissors beats Paper")}
+                else {if(playerSelection ==="paper" && computerSelection === "rock") {return ("You win! Paper beats Rock")}
+                else {if(computerSelection === "rock") {return ("You lose! Rock beats Scissors")}
+                else {if(computerSelection === "scissors") {return ("You lose! Scissors beats paper")}
+                else {return ("You lose! Paper beats Rock")
+    }}}}}}
+    }
+       
+      
+      
+    
+console.log("Player => " + playerSelection)
+console.log("Computer => " + getComputerChoice());
+    
+console.log((playRound(computerSelection, playerSelection)));
