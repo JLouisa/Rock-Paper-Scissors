@@ -194,42 +194,60 @@ Add Score keeping for Player and Computer
 */
 
 // Computer Choice
-const randomCC = Math.random().toFixed(2)*100;
 
-function getComputerChoice(choiceComp) {
 
-    if(randomCC < 33){choiceComp = "rock"}
-        else {if(randomCC > 66) {choiceComp = "paper"}
-            else {choiceComp = "scissors"}
-            };
-    return choiceComp;
-}
+// function getComputerChoice(choiceComp) {
+//     let randomCC = Math.random().toFixed(1)*10;
+//     let random1 = randomCC;
+//     console.log("C " + randomCC)
 
-const computerSelection = getComputerChoice();
+//     if(random1 < 3){choiceComp = "rock"}
+//         else {if(random1 > 6) {choiceComp = "paper"}
+//             else {random1 = "scissors"}
+//             };
+//     return choiceComp;
+// }
+// const newLocal = getComputerChoice();
+// let computerSelection = newLocal;
+// console.log("1 " + computerSelection);
 
 // Player Choice
 const playerSelection = prompt("Choose your Weapon!", "rock").toLowerCase();
 
 //Rock-Paper-Scissor Function
-function playRound(computerSelection, playerSelection) {
+function playRound(playerSelection, computerSelection) {
+ 
+        let randomCC = Math.random().toFixed(1)*10;
+        let choiceComp;
+           
+        if(randomCC < 3){choiceComp = "rock"}
+            else {if(randomCC > 6) {choiceComp = "paper"}
+                else {choiceComp = "scissors"}
+                };
+               
+        console.log("Computer => " + choiceComp);
+        computerSelection = choiceComp;
 
     if(playerSelection === computerSelection) {return ("It's a tie! Try again")}
         else {if(playerSelection ==="rock" && computerSelection === "scissors") {return ("You win! Rock beats Scissors")}
-            else {if(playerSelection ==="scissors" && computerSelection === "paper") {return ("You win! Scissors beats Paper")}
-                else {if(playerSelection ==="paper" && computerSelection === "rock") {return ("You win! Paper beats Rock")}
-                else {if(computerSelection === "rock") {return ("You lose! Rock beats Scissors")}
-                else {if(computerSelection === "scissors") {return ("You lose! Scissors beats paper")}
-                else {return ("You lose! Paper beats Rock")
+        else {if(playerSelection ==="scissors" && computerSelection === "paper") {return ("You win! Scissors beats Paper")}
+        else {if(playerSelection ==="paper" && computerSelection === "rock") {return ("You win! Paper beats Rock")}
+        else {if(computerSelection === "rock") {return ("You lose! Rock beats Scissors")}
+        else {if(computerSelection === "scissors") {return ("You lose! Scissors beats paper")}
+        else {return ("You lose! Paper beats Rock")
     }}}}}}
     }
-function showConsole(){
-console.log("Player => " + playerSelection)
-console.log("Computer => " + getComputerChoice());
 
-console.log((playRound(computerSelection, playerSelection)));
-}
+// Show Progress in console.
+//function showConsole(){
+console.log("Player => " + playerSelection);
+//console.log("Computer => " + getComputerChoice());
+console.log((playRound(playerSelection)));
+//}
 
-for(i = 0; i < 5; i++){
-    playRound();
-    showConsole();
-}
+// //Round counting
+// for(i = 0; i < 5; i++){
+//     getComputerChoice();
+//     playRound();
+//     showConsole();
+// }
