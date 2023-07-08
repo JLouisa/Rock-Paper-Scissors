@@ -212,19 +212,20 @@ Add Score keeping for Player and Computer
 // console.log("1 " + computerSelection);
 
 // Player Choice
-const playerSelection = prompt("Choose your Weapon!", "rock").toLowerCase();
 
 //Rock-Paper-Scissor Function
 function playRound(playerSelection, computerSelection) {
  
         let randomCC = Math.random().toFixed(1)*10;
         let choiceComp;
+        playerSelection = prompt("Choose your Weapon!", "rock").toLowerCase();
            
         if(randomCC < 3){choiceComp = "rock"}
             else {if(randomCC > 6) {choiceComp = "paper"}
                 else {choiceComp = "scissors"}
                 };
-               
+        
+        console.log("Player => " + playerSelection);
         console.log("Computer => " + choiceComp);
         computerSelection = choiceComp;
 
@@ -238,16 +239,15 @@ function playRound(playerSelection, computerSelection) {
     }}}}}}
     }
 
-// Show Progress in console.
-//function showConsole(){
-console.log("Player => " + playerSelection);
+//Show Progress in console.
+function showConsole(){
+//console.log("Player => " + playerSelection);
 //console.log("Computer => " + getComputerChoice());
-console.log((playRound(playerSelection)));
-//}
+//console.log((playRound()));
+}
 
-// //Round counting
-// for(i = 0; i < 5; i++){
-//     getComputerChoice();
-//     playRound();
-//     showConsole();
-// }
+//Round counting
+for(i = 0; i < 5; i++){
+ //   getComputerChoice();
+    console.log(playRound())
+}
