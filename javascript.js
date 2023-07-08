@@ -211,15 +211,13 @@ Add Score keeping for Player and Computer
 // let computerSelection = newLocal;
 // console.log("1 " + computerSelection);
 
-// Player Choice
-
 //Rock-Paper-Scissor Function
 function playRound(playerSelection, computerSelection) {
  
         let randomCC = Math.random().toFixed(1)*10;
         let choiceComp;
         playerSelection = prompt("Choose your Weapon!", "rock").toLowerCase();
-           
+
         if(randomCC < 3){choiceComp = "rock"}
             else {if(randomCC > 6) {choiceComp = "paper"}
                 else {choiceComp = "scissors"}
@@ -239,15 +237,18 @@ function playRound(playerSelection, computerSelection) {
     }}}}}}
     }
 
-//Show Progress in console.
-function showConsole(){
-//console.log("Player => " + playerSelection);
-//console.log("Computer => " + getComputerChoice());
-//console.log((playRound()));
-}
+let gameWin = 0;
+let gameLose = 0;
+let gameTie = 0;
+let result;
 
 //Round counting
-for(i = 0; i < 5; i++){
- //   getComputerChoice();
-    console.log(playRound())
+for(i = 1; i < 6; i++){
+    console.log("Round " + i);
+    result = playRound()
+    console.log(result)
+    if(result == "You win! Rock beats Scissors" || result == "You win! Scissors beats Paper" || result == "You win! Paper beats Rock") {++gameWin}
+    else {if(result == "You lose! Paper beats Rock" || result == "You lose! Scissors beats paper" || result == "You lose! Rock beats Scissors") {++gameLose}
+    else {++gameTie}};
+    console.log("You won " + gameWin + " and lost " + gameLose + " with " + gameTie + " ties!");
 }
