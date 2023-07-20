@@ -29,18 +29,27 @@ function roundsCount() {
 
 //Player selection UI
 rock.addEventListener('click', () => {
+    paper.classList.remove('Chosen');
+    scissors.classList.remove('Chosen');
+    rock.classList.add('Chosen');
     player = "rock";
     announce.textContent = (game());
     roundsCount()
   });
 
 paper.addEventListener('click', () => {
+    paper.classList.add('Chosen');
+    scissors.classList.remove('Chosen');
+    rock.classList.remove('Chosen');
     player ="paper";
     announce.textContent = (game());
     roundsCount()
   });
 
 scissors.addEventListener('click', () => {
+    paper.classList.remove('Chosen');
+    scissors.classList.add('Chosen');
+    rock.classList.remove('Chosen');
     player = "scissors";
     announce.textContent = (game());
     roundsCount()

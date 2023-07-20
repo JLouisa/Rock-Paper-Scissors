@@ -1,13 +1,36 @@
+.structure {
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid green; */
+}
+
+.side {
+    display: flex;
+    flex: 1;
+
+}
+
+/* section {
+    border: 2px solid red;
+} */
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    max-width:  1000px;
+}
+
 h1 {
     color: blue;
     text-align: center;
+    padding: 40px;
 }
 
 .announcementText {
     border: 2px solid black;
     text-align: center;
     padding: 100px 100px 10px 100px;
-    box-shadow: 2px solid gold;
 }
 
 #announcement {
@@ -38,4 +61,11 @@ button {
     display: flex;
     gap: 50px;
     justify-content: center;
+    font-size: 30px;
 }
+
+.Chosen {
+    transform: scale(1.1);
+    border-color: #00d32e;
+    box-shadow: 0 0 1rem #00d32e;
+  }

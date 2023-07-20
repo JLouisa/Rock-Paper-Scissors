@@ -11,11 +11,14 @@
 
     <body>
         <h1 class="header">Let's Play Rock-Paper-Scissors!</h1>
-        <div class="announcementText">
+        <div class="structure">
+        <section class="left side"></section>
+        <section class="middle"> 
+            <div class= "announcementText">
             <div id="announcement">Choose your Weapon!</div>
             <div class="computerText">Computer has chosen: <span id="computerChoice">...</span></div>
-        </div>
-        <div class="buttons">
+            </div>
+            <div class="buttons">
             <button id="rockSelect">Rock</button>
             <button id="paperSelect">Paper</button>
             <button id="scissorsSelect">Scissors</button>
@@ -25,5 +28,8 @@
             <div class="won">You won: <span class="wonBoard"></span></div>
             <div class="lose">You lost: <span class="loseBoard"></span></div>
         </div>
+        </section>
+        <section class="right side"></section>
+    </div>
     </body>
 </html>
