@@ -30,7 +30,13 @@ h1 {
 .announcementText {
     border: 2px solid black;
     text-align: center;
-    padding: 100px 100px 10px 100px;
+    padding: 10px 100px 10px 100px;
+}
+
+.bestOfRounds {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 80px;
 }
 
 #announcement {

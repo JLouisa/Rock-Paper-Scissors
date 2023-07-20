@@ -38,9 +38,9 @@ rock.addEventListener('click', () => {
   });
 
 paper.addEventListener('click', () => {
-    paper.classList.add('Chosen');
     scissors.classList.remove('Chosen');
     rock.classList.remove('Chosen');
+    paper.classList.add('Chosen');
     player ="paper";
     announce.textContent = (game());
     roundsCount()
@@ -48,8 +48,8 @@ paper.addEventListener('click', () => {
 
 scissors.addEventListener('click', () => {
     paper.classList.remove('Chosen');
-    scissors.classList.add('Chosen');
     rock.classList.remove('Chosen');
+    scissors.classList.add('Chosen');
     player = "scissors";
     announce.textContent = (game());
     roundsCount()
