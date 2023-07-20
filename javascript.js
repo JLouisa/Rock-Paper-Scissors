@@ -2,7 +2,8 @@
 const rock = document.querySelector("#rockSelect");
 const paper = document.querySelector("#paperSelect");
 const scissors = document.querySelector("#scissorsSelect");
-const announce = document.querySelector('#announcement')
+const announce = document.querySelector('#announcement');
+const computerShow = document.querySelector('#computerChoice');
 let player;
 
 //Player selection UI
@@ -38,6 +39,7 @@ function game() {
 
     console.log("Player => " + playerSelection);
     console.log("Computer => " + choiceComp);
+    computerShow.textContent = choiceComp;
     
 //Game Rules
     if(playerSelection === computerSelection) {return ("It's a tie! Try again")}
