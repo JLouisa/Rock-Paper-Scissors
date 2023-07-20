@@ -2,22 +2,23 @@
 const rock = document.querySelector("#rockSelect");
 const paper = document.querySelector("#paperSelect");
 const scissors = document.querySelector("#scissorsSelect");
+const announce = document.querySelector('#announcement')
 let player;
 
 //Player selection UI
 rock.addEventListener('click', () => {
     player = "rock";
-    alert(game());
+    announce.textContent = (game());
   });
 
 paper.addEventListener('click', () => {
     player ="paper";
-    alert(game());
+    announce.textContent = (game());
   });
 
 scissors.addEventListener('click', () => {
     player = "scissors";
-    alert(game());
+    announce.textContent = (game());
   });
 
 
