@@ -60,13 +60,13 @@ let gameTie = 0;
 let result;
 
 //Round counting
-for(i = 1; i < 6; i++){
-    console.log("Round " + i);
-    result = game()
-    console.log(result)
-    if(result == undefined){ i= 10}
-    else {if(result == "You win! Rock beats Scissors" || result == "You win! Scissors beats Paper" || result == "You win! Paper beats Rock") {++gameWin}
-    else {if(result == "You lose! Paper beats Rock" || result == "You lose! Scissors beats paper" || result == "You lose! Rock beats Scissors") {++gameLose}
-    else {++gameTie}}};
-    if(i < 6) {console.log("You won " + gameWin + " and lost " + gameLose + " with " + gameTie + " ties!")};
-}
+// for(i = 1; i < 6; i++){
+//     console.log("Round " + i);
+//     result = game()
+//     console.log(result)
+//     if(result == undefined){ i = 10}
+//     else {if(result == "You win! Rock beats Scissors" || result == "You win! Scissors beats Paper" || result == "You win! Paper beats Rock") {++gameWin}
+//     else {if(result == "You lose! Paper beats Rock" || result == "You lose! Scissors beats paper" || result == "You lose! Rock beats Scissors") {++gameLose}
+//     else {++gameTie}}};
+//     if(i < 6) {console.log("You won " + gameWin + " and lost " + gameLose + " with " + gameTie + " ties!")};
+// }
