@@ -1,48 +1,44 @@
-/* 
 
-I need to get 1 of 3 random choice from a computer
+const rock = document.querySelector("#rockSelect");
+const paper = document.querySelector("#paperSelect");
+const scissors = document.querySelector("#scissorsSelect");
+let player;
 
-Create getComputerChoice function
-use the random math function to get a number
-multiple by 100 (because it come in decimals)
-Remove any remaining decimals
-if the number is below 0 and 33 log "Rock"
-if the number is above 66 log "Scissors"
-if the number is between 33 and 66 log "Paper"
-print computer choice 
+//Player selection UI
+rock.addEventListener('click', () => {
+    player = "rock";
+    alert(game());
+  });
 
+paper.addEventListener('click', () => {
+    player ="paper";
+    alert(game());
+  });
 
- -- added exercise code --
-//Create Player choice
-//Create rule for the game
-    //Rock beats Scissors
-    //Scissors beats Paper
-    //Paper beats Rock
-//Compare Player choice with Computer Choice
-//Choose the winner
-//Print who wins in console */
-
-//Rock-Paper-Scissor Function
+scissors.addEventListener('click', () => {
+    player = "scissors";
+    alert(game());
+  });
 
 
-function game(){
+//Game logic
+function game() {
     function playRound(playerSelection, computerSelection) {
- 
-       
-    pSelection = prompt("Choose your Weapon!", "rock");
-        if(pSelection == null || pSelection == undefined) {return alert("It's a shame you don't want to play :(")}
 
+//Computer Selection
     let randomCC = Math.random().toFixed(1)*10;
     let choiceComp;
         if(randomCC < 3){choiceComp = "rock"}
             else {if(randomCC > 6) {choiceComp = "paper"}
-                else {choiceComp = "scissors"}
-                }; 
-    playerSelection = pSelection.toLowerCase();
+            else {choiceComp = "scissors"}}; 
+
+    playerSelection = player;
     computerSelection = choiceComp;
+
     console.log("Player => " + playerSelection);
     console.log("Computer => " + choiceComp);
-
+    
+//Game Rules
     if(playerSelection === computerSelection) {return ("It's a tie! Try again")}
         else {if(playerSelection ==="rock" && computerSelection === "scissors") {return ("You win! Rock beats Scissors")}
         else {if(playerSelection ==="scissors" && computerSelection === "paper") {return ("You win! Scissors beats Paper")}
@@ -52,15 +48,26 @@ function game(){
         else {return ("You lose! Paper beats Rock")
     }}}}}}
     }
-return playRound()}
+return playRound()
+}
 
 let gameWin = 0;
 let gameLose = 0;
 let gameTie = 0;
+let roundB = 0;
 let result;
 
-//Round counting
-// for(i = 1; i < 6; i++){
+const round = document.querySelector('.roundBoard');
+round.textContent = roundB;
+
+const won = document.querySelector('.wonBoard');
+won.textContent = gameWin;
+
+const lose = document.querySelector('.loseBoard');
+lose.textContent = gameLose;
+
+// // Round counting
+// for(i = 1; i < 6; i++) {
 //     console.log("Round " + i);
 //     result = game()
 //     console.log(result)
@@ -70,11 +77,3 @@ let result;
 //     else {++gameTie}}};
 //     if(i < 6) {console.log("You won " + gameWin + " and lost " + gameLose + " with " + gameTie + " ties!")};
 // }
-
-const rock = document.querySelector("#rockSelect");
-const paper = document.querySelector("#paperSelect");
-const scissors = document.querySelector("#scissorsSelect");
-
-rock.addEventListener('click', () => {
-    alert("Rock");
-  });
