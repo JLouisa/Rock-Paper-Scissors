@@ -70,3 +70,11 @@ let result;
 //     else {++gameTie}}};
 //     if(i < 6) {console.log("You won " + gameWin + " and lost " + gameLose + " with " + gameTie + " ties!")};
 // }
+
+const rock = document.querySelector("#rockSelect");
+const paper = document.querySelector("#paperSelect");
+const scissors = document.querySelector("#scissorsSelect");
+
+rock.addEventListener('click', () => {
+    alert("Rock");
+  });
